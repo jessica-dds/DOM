@@ -1,1 +1,1 @@
-# DOM
+Desenvolvido durante o curso Full Stack da Cubos Academy.
