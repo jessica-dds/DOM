@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injetando elemento</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        const novoElemento = document.createElement("h1");
+        console.log(novoElemento);
+        novoElemento.textContent = "Injetando elemento";
+        novoElemento.style.color = 'blue';
+        //document.body.appendChild(novoElemento);
+        divRoot.appendChild(novoElemento);
+    </script>
+</body>
+
+</html>
