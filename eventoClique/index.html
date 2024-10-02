@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+
+<body>
+    <h1></h1>
+    <button class="cliqueAqui">Clique aqui</button>
+    <!-- função inline -->
+    <button onclick="mostrarCliqueBotao2()">Clique aqui 2</button>
+
+    <script>
+        const btnCliqueAqui = document.querySelector('.cliqueAqui');
+
+        function mostrarCliqueBotao() {
+            const elementoH1 = document.querySelector('h1');
+            elementoH1.textContent = 'O botão foi clicado!';
+        }
+
+        function mostrarCliqueBotao2() {
+            const elementoH1 = document.querySelector('h1');
+            elementoH1.textContent = 'O botão 2 foi clicado!';
+        }
+
+        btnCliqueAqui.addEventListener("click", mostrarCliqueBotao);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        .avo {
+            background-color: purple;
+            padding: 20px;
+        }
+
+        .pai {
+            background-color: blue;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="avo">
+        <div class="pai" onclick="cliquePai()">
+            <button class="filho" onclick="cliqueFilho(event)">Clique</button>
+        </div>
+    </div>
+    <script>
+        function cliquePai() {
+            console.log('cliquePai');
+        }
+        function cliqueFilho(event) {
+            event.stopPropagation();
+            console.log('cliqueFilho');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+
+<body>
+    <h4>Olá</h4>
+    <script>
+        let quantidadePassouOMouse = 0;
+        const elementoH4 = document.querySelector('h4');
+        elementoH4.addEventListener('mouseover', function () {
+            quantidadePassouOMouse++;
+            elementoH4.textContent = `Olá, você já passou o mouse ${quantidadePassouOMouse} vezes.`;
+        })
+    </script>
+</body>
+
+</html>

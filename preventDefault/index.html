@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+
+<body>
+    <form onsubmit="entrar(event)">
+        <input type="email" name="email" id="" />
+        <input type="password" name="senha" id="" />
+        <button type="submit">Entrar</button>
+    </form>
+    <script>
+        const dadosUsuarios = [
+            {
+                email: 'jessica@email.com',
+                senha: '123abc'
+            },
+            {
+                email: 'gui@email.com',
+                senha: '123abc'
+            },
+            {
+                email: 'joca@email.com',
+                senha: '123abc'
+            },
+        ];
+        function entrar(event) {
+            event.preventDefault();
+            const elementoEmail = document.querySelector('input[name="email"]');
+            const elementoSenha = document.querySelector('input[name="senha"]');
+
+            if (!elementoEmail.value && !elementoSenha.value) {
+                alert('Email ou senha não estão corretos.');
+                return;
+            }
+            const resposta = dadosUsuarios.find(usuaeio => {
+                if (usuario.email == elementoEmail.value &&
+                    usuario.senha == elementoSenha.value)
+                    return usuario;
+            });
+
+            if (!resposta) {
+                alert("Usuário não encontrado.");
+            } else {
+                alert("Login efetuado com sucesso.");
+            }
+        }
+    </script>
+</body>
+
+</html>
